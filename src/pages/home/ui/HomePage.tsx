@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+import { useViewer } from '@/entities/viewer'
 import { addDays, defaultRoundDate, formatDateLabel } from '@/shared/lib/date'
 
 import { buildDateSearch, readDateParam } from '../lib/dateParam'
@@ -7,6 +8,7 @@ import { useGames } from '../model/useGames'
 import { DateNav } from './DateNav/DateNav'
 import { GameList } from './GameList/GameList'
 import styles from './HomePage.module.css'
+import { ViewerMenu } from './ViewerMenu/ViewerMenu'
 
 function currentSearch(): string {
     const search = typeof window === 'undefined' ? '' : window.location.search
@@ -21,6 +23,7 @@ function initialRoundDate(): string {
 export function HomePage() {
     const [roundDate, setRoundDate] = useState(initialRoundDate)
     const { state, reload } = useGames(roundDate)
+    const viewer = useViewer()
 
     function selectDate(date: string) {
         setRoundDate(date)
@@ -38,6 +41,7 @@ export function HomePage() {
                     height={48}
                 />
                 <h1 className={styles.title}>QD Basketball</h1>
+                <ViewerMenu viewer={viewer} />
             </header>
             <DateNav
                 label={formatDateLabel(roundDate)}

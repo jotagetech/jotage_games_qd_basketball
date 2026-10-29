@@ -1,0 +1,32 @@
+.menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-left: auto;
+}
+
+.name {
+    max-width: 10rem;
+    overflow: hidden;
+    font-family: var(--font-condensed);
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.signIn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--tap-min);
+    min-height: var(--tap-min);
+    padding: 0 var(--space-3);
+    border-radius: var(--radius-sm);
+    background: var(--color-brand);
+    color: var(--color-on-brand);
+    font-family: var(--font-condensed);
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    text-decoration: none;
+}
