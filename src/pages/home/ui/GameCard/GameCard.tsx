@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 import { hasScoreboard, statusLabel } from '../../lib/gameStatus'
 import type { Game } from '../../model/game'
 import type { Team } from '../../model/team'
@@ -13,6 +15,7 @@ interface TeamLineProps {
 
 interface GameCardProps {
     game: Game
+    pick?: ReactNode
 }
 
 function resolveOutcome(game: Game, team: Team): TeamLineProps['outcome'] {
@@ -40,7 +43,7 @@ function TeamLine({ team, score, outcome }: TeamLineProps) {
     )
 }
 
-export function GameCard({ game }: GameCardProps) {
+export function GameCard({ game, pick }: GameCardProps) {
     const showScore = hasScoreboard(game.status)
     const awayScore = showScore ? game.awayScore : null
     const homeScore = showScore ? game.homeScore : null
@@ -50,6 +53,7 @@ export function GameCard({ game }: GameCardProps) {
         <li className={styles.card}>
             <TeamLine team={game.awayTeam} score={awayScore} outcome={resolveOutcome(game, game.awayTeam)} />
             <TeamLine team={game.homeTeam} score={homeScore} outcome={resolveOutcome(game, game.homeTeam)} />
+            {pick}
             <p className={statusClass}>
                 <StatusIcon status={game.status} />
                 {statusLabel(game)}

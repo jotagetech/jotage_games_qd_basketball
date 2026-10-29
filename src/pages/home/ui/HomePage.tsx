@@ -5,6 +5,7 @@ import { addDays, defaultRoundDate, formatDateLabel } from '@/shared/lib/date'
 
 import { buildDateSearch, readDateParam } from '../lib/dateParam'
 import { useGames } from '../model/useGames'
+import { usePicks } from '../model/usePicks'
 import { DateNav } from './DateNav/DateNav'
 import { GameList } from './GameList/GameList'
 import styles from './HomePage.module.css'
@@ -22,8 +23,9 @@ function initialRoundDate(): string {
 
 export function HomePage() {
     const [roundDate, setRoundDate] = useState(initialRoundDate)
-    const { state, reload } = useGames(roundDate)
+    const { state, reload, refresh } = useGames(roundDate)
     const viewer = useViewer()
+    const pickBoard = usePicks(viewer, state, refresh)
 
     function selectDate(date: string) {
         setRoundDate(date)
@@ -50,7 +52,7 @@ export function HomePage() {
                 onToday={() => selectDate(defaultRoundDate(new Date()))}
             />
             <main className={styles.content}>
-                <GameList state={state} now={new Date()} onRetry={reload} />
+                <GameList state={state} now={new Date()} onRetry={reload} pickBoard={pickBoard} />
             </main>
         </div>
     )

@@ -61,7 +61,25 @@ export function useGames(roundDate: string) {
         }
     }, [live, roundDate])
 
-    const reload = useCallback(() => setAttempt((current) => current + 1), [])
+    const [refreshCount, setRefreshCount] = useState(0)
 
-    return { state, reload }
+    useEffect(() => {
+        if (refreshCount === 0) {
+            return undefined
+        }
+
+        let cancelled = false
+        fetchGamesByDate(roundDate)
+            .then((games) => !cancelled && setState({ phase: 'ready', games }))
+            .catch(() => undefined)
+
+        return () => {
+            cancelled = true
+        }
+    }, [refreshCount, roundDate])
+
+    const reload = useCallback(() => setAttempt((current) => current + 1), [])
+    const refresh = useCallback(() => setRefreshCount((current) => current + 1), [])
+
+    return { state, reload, refresh }
 }

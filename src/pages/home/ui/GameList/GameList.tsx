@@ -1,6 +1,8 @@
 import { staleMinutes } from '../../lib/staleness'
+import type { PickBoard } from '../../model/pickBoard'
 import type { GamesState } from '../../model/useGames'
 import { GameCard } from '../GameCard/GameCard'
+import { PickControl } from '../PickControl/PickControl'
 import styles from './GameList.module.css'
 
 const SKELETON_COUNT = 4
@@ -10,9 +12,10 @@ interface GameListProps {
     state: GamesState
     now: Date
     onRetry: () => void
+    pickBoard?: PickBoard
 }
 
-export function GameList({ state, now, onRetry }: GameListProps) {
+export function GameList({ state, now, onRetry, pickBoard }: GameListProps) {
     if (state.phase === 'loading') {
         return (
             <section className={styles.section} aria-busy="true">
@@ -65,7 +68,11 @@ export function GameList({ state, now, onRetry }: GameListProps) {
             </div>
             <ul className={styles.list}>
                 {state.games.map((game) => (
-                    <GameCard key={game.id} game={game} />
+                    <GameCard
+                        key={game.id}
+                        game={game}
+                        pick={pickBoard && <PickControl game={game} now={now} board={pickBoard} />}
+                    />
                 ))}
             </ul>
         </section>
