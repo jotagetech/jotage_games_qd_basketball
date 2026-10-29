@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+*.local
+.env
+.env.*
+!.env.example
+.vercel
+supabase/.temp/
+supabase/.branches/
+
+# Instruções locais do agente; as regras comuns ficam no AGENTS.md
+CLAUDE.md
+.claude/*
+!.claude/settings.json
