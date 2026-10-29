@@ -1,1 +1,3 @@
--- Dados de teste do Supabase local. Ainda sem tabelas para popular.
+-- Dados de teste do Supabase local.
+-- Times e jogos não são semeados: vêm da sincronização com o provedor, e
+-- dado inventado aqui esconderia falhas dessa rotina.
