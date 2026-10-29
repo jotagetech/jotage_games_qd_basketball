@@ -1,0 +1,105 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin: 0;
+    padding: var(--space-3);
+    border: 2px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    list-style: none;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: var(--tap-min);
+}
+
+.identity {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.abbreviation {
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+
+.name {
+    overflow: hidden;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.score {
+    min-width: var(--space-5);
+    font-family: var(--font-display);
+    font-size: var(--font-size-xl);
+    line-height: 1;
+    text-align: right;
+}
+
+.winner .score,
+.winner .abbreviation {
+    color: var(--color-brand);
+}
+
+.loser .score,
+.loser .abbreviation {
+    color: var(--color-text-muted);
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--color-line);
+    color: var(--color-text-muted);
+    font-family: var(--font-condensed);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+.live {
+    color: var(--color-live);
+}
+
+.icon {
+    flex: none;
+    width: 1em;
+    height: 1em;
+}
+
+.dot {
+    flex: none;
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: 50%;
+    background: currentcolor;
+    animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(0.6);
+    }
+}
