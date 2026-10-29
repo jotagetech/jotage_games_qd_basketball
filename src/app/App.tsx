@@ -5,6 +5,8 @@ import { HomePage } from '@/pages/home'
 import { LoginPage } from '@/pages/login'
 import { RankingPage } from '@/pages/ranking'
 
+import { Splash } from './splash'
+
 export function App() {
     return (
         <BrowserRouter>
@@ -14,6 +16,7 @@ export function App() {
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/ranking" element={<RankingPage />} />
                 </Routes>
+                <Splash />
             </ViewerProvider>
         </BrowserRouter>
     )

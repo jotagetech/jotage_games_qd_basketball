@@ -1,0 +1,23 @@
+{
+  "commit": "024ada9f22097108ac149b801906fa5b757ed82f",
+  "arquivos": {
+    "chiptune.test.ts": "a80e73d9915475df76f944214d33aaa899cdf1856ff1352f776092124ccd3445",
+    "chiptune.ts": "db2ef70222fe4482ea83efd2cd6b9696b54fa7e74589399fcc9a85a1ceaed6a9",
+    "controller.ts": "c5801fe47d448c8d7346ff7c8ed2fbaedb1820fb638ccb698b67ba63b4c45b26",
+    "cues.ts": "e2462770e90cddde59fb644e49cffec35f47908024bb9fb674414d4d9a346fb0",
+    "frame.test.ts": "d9c3bb06cbc56a7bae2ee4152dfc469317ef870eccb7a6e5686fb04510076c61",
+    "frame.ts": "67f765281c418a7eb3a5d8961cc5a78c76fc80ffa3024135dcf7bb039fab2a89",
+    "glyphs.ts": "accfeafb336b1329fe7b0a65420c711fa30844602051b8c7e9faaa3c40e7a7fc",
+    "index.ts": "78a61e1c3dac7a3152a71c124ce80d34f6d65bdb358428725ffb73cb10541cf8",
+    "monogram.ts": "86d3761611f5041a17af165dcd5b805fb591e9e23b0a5efa1e04740ae1bd779e",
+    "palette.ts": "efaed21681029560882836b5fac4ee0a1a7440b92da26ba4f2b5e05715988feb",
+    "present.test.ts": "00b20e7f7181898a9f14d9b7c01135c9c02ab7c4893485bfbb4fe5aa24d7e429",
+    "present.ts": "1d4e1cb14a4e403bd725e5ae1ecde79ba34b435df4909ea6ac88b9292ab4e094",
+    "rect.ts": "6784f30ff584a056ee410a6a5ec584f7a7a1377356d01932f6f5011ab5c4fa62",
+    "signature.test.ts": "4dc0ef28815958d4fc420ab82f368b35f114cf1baf6ade6e002064162c1e2252",
+    "signature.ts": "037d856705baf5ae6f320a22161dc70ef8293b4ca80553bd45c6bb32200941dc",
+    "soundtrack.test.ts": "74378c6cb3f795c6f11f17bc4cf723b94f5443e334787e5941e5d38e0b4bde0e",
+    "soundtrack.ts": "fc05783e97dba479d5b96d96fb99fdb6d0154790291b8b5d8a160c489402f5b1",
+    "timing.ts": "a8a13067f6fed8810535336a1784ecb16e8c3b36952197d54521cb1bf9c8e978"
+  }
+}

@@ -21,6 +21,7 @@ Antes de concluir:
 - O código segue o Feature-Sliced Design, validado pelo Steiger com a configuração `recommended`, sem exceção. Se o Steiger reclamar, a estrutura muda; o `steiger.config.ts` não ganha regra desligada.
 - Camadas em `src/`: `app`, `pages`, `widgets`, `features`, `entities`, `shared`. Uma camada só importa das de baixo, e cada slice expõe só o que está no seu `index.ts`.
 - `src/app` guarda a entrada e os estilos globais, que contêm só tokens e base.
+- `src/abertura` é a cópia da vinheta de abertura do estúdio Jotagê Games, cuja fonte fica no repositório `jotage_games` (pasta `abertura/`). Nunca se edita a cópia: a mudança vai na fonte, e a cópia é refeita com `npm --prefix abertura run copiar ../jotage_games_qd_basketball`, rodado na raiz do repositório do estúdio (`verificar` confere que ela é igual à fonte).
 - Estilo de componente fica em CSS Module ao lado do componente. Cor, espaço e tamanho de fonte vêm sempre de tokens (`var(--...)`); o stylelint recusa valor solto.
 - Dependência nova só com motivo explícito na descrição do card.
 
