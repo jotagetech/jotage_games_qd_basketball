@@ -1,15 +1,45 @@
 :root {
-    --color-background: #f5f5f5;
-    --color-surface: #ffffff;
-    --color-text: #1a1a1a;
-    --color-text-muted: #5c5c5c;
+    --color-night: #1c1412;
+    --color-surface: #271d19;
+    --color-surface-raised: #33261f;
+    --color-line: #4a3a31;
+    --color-text: #f6efe9;
+    --color-text-muted: #bba99c;
+    --color-brand: #f25106;
+    --color-on-brand: #1c1412;
+    --color-hardwood: #d29a5c;
+    --color-hardwood-grain: #bc8247;
+    --color-on-hardwood: #1c1412;
+    --color-live: #ff5a47;
+    --color-focus: #ffd27a;
+
+    --gradient-hardwood: repeating-linear-gradient(
+        90deg,
+        var(--color-hardwood) 0,
+        var(--color-hardwood) 2.5rem,
+        var(--color-hardwood-grain) 2.5rem,
+        var(--color-hardwood-grain) calc(2.5rem + 2px)
+    );
 
     --space-1: 0.25rem;
     --space-2: 0.5rem;
     --space-3: 1rem;
     --space-4: 1.5rem;
     --space-5: 2rem;
+    --space-6: 3rem;
 
-    --font-size-body: 1rem;
-    --font-size-title: 1.75rem;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --tap-min: 44px;
+
+    --font-display: 'Anton', 'Impact', sans-serif;
+    --font-body: 'Barlow', system-ui, sans-serif;
+    --font-condensed: 'Barlow Condensed', 'Barlow', system-ui, sans-serif;
+
+    --font-size-xs: 0.8125rem;
+    --font-size-sm: 0.9375rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.75rem;
+    --font-size-xxl: 2.5rem;
 }

@@ -10,4 +10,11 @@ describe('HomePage', () => {
         expect(markup).toContain('<h1')
         expect(markup).toContain('QD Basketball')
     })
+
+    it('renderiza o logo do parceiro com texto alternativo', () => {
+        const markup = renderToStaticMarkup(<HomePage />)
+
+        expect(markup).toContain('src="/brand/quadruplo-duplo.png"')
+        expect(markup).toContain('alt="Quádruplo Duplo"')
+    })
 })
