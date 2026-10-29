@@ -1,0 +1,19 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-3);
+    min-height: 100dvh;
+    padding: var(--space-4);
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+    font-size: var(--font-size-title);
+}
+
+.message {
+    margin: 0;
+    color: var(--color-text-muted);
+}

@@ -1,0 +1,1 @@
+-- Dados de teste do Supabase local. Ainda sem tabelas para popular.

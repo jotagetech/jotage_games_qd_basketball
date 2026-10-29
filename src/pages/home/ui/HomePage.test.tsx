@@ -1,0 +1,13 @@
+import { renderToStaticMarkup } from 'react-dom/server'
+import { describe, expect, it } from 'vitest'
+
+import { HomePage } from './HomePage'
+
+describe('HomePage', () => {
+    it('renderiza o título do produto', () => {
+        const markup = renderToStaticMarkup(<HomePage />)
+
+        expect(markup).toContain('<h1')
+        expect(markup).toContain('QD Basketball')
+    })
+})
