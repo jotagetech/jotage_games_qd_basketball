@@ -1,0 +1,12 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.content {
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: var(--space-3);
+}

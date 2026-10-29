@@ -1,7 +1,9 @@
 import { useState } from 'react'
 
 import { useViewer } from '@/entities/viewer'
+import { ViewerMenu } from '@/features/auth'
 import { addDays, defaultRoundDate, formatDateLabel } from '@/shared/lib/date'
+import { AppHeader } from '@/shared/ui/app-header'
 
 import { buildDateSearch, readDateParam } from '../lib/dateParam'
 import { useGames } from '../model/useGames'
@@ -9,7 +11,6 @@ import { usePicks } from '../model/usePicks'
 import { DateNav } from './DateNav/DateNav'
 import { GameList } from './GameList/GameList'
 import styles from './HomePage.module.css'
-import { ViewerMenu } from './ViewerMenu/ViewerMenu'
 
 function currentSearch(): string {
     const search = typeof window === 'undefined' ? '' : window.location.search
@@ -34,17 +35,9 @@ export function HomePage() {
 
     return (
         <div className={styles.page}>
-            <header className={styles.header}>
-                <img
-                    className={styles.logo}
-                    src="/brand/quadruplo-duplo.png"
-                    alt="Quádruplo Duplo"
-                    width={48}
-                    height={48}
-                />
-                <h1 className={styles.title}>QD Basketball</h1>
+            <AppHeader>
                 <ViewerMenu viewer={viewer} />
-            </header>
+            </AppHeader>
             <DateNav
                 label={formatDateLabel(roundDate)}
                 onPrevious={() => selectDate(addDays(roundDate, -1))}

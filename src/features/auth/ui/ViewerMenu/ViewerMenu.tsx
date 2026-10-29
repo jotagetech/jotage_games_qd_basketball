@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 
 import type { Viewer } from '@/entities/viewer'
-import { SignOutButton } from '@/features/auth'
 
+import { SignOutButton } from '../SignOutButton/SignOutButton'
 import styles from './ViewerMenu.module.css'
 
 const FALLBACK_NAME = 'Minha conta'
